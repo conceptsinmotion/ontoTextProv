@@ -1,0 +1,347 @@
+Prefix: : <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8>
+
+
+AnnotationProperty: rdfs:comment
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+ObjectProperty: belongs_to
+
+    InverseOf: 
+        has
+    
+    
+ObjectProperty: grounds
+
+    
+ObjectProperty: has
+
+    InverseOf: 
+        belongs_to
+    
+    
+ObjectProperty: has_an_sich_counterpart
+
+    InverseOf: 
+        refers_to
+    
+    
+ObjectProperty: is_composed_of
+
+    InverseOf: 
+        is_part_of
+    
+    
+ObjectProperty: is_part_of
+
+    InverseOf: 
+        is_composed_of
+    
+    
+ObjectProperty: refers_to
+
+    InverseOf: 
+        has_an_sich_counterpart
+    
+    
+Class: Adherence
+
+    EquivalentTo: 
+        Quality
+         and Real
+    
+    
+Class: Aggregate
+
+    EquivalentTo: 
+        has some External_Quality,
+        is_composed_of min 2 owl:Thing
+    
+    SubClassOf: 
+        Object
+    
+    
+Class: An_Sich_Realm
+
+    SubClassOf: 
+        Not_Real,
+        Ontological_Realm
+    
+    DisjointWith: 
+        Linguistic_Realm, Mental_Realm
+    
+    
+Class: Appearance
+
+    
+Class: Complex_Idea
+
+    SubClassOf: 
+        Idea,
+        is_composed_of min 2 Idea
+    
+    
+Class: Concept
+
+    EquivalentTo: 
+        (not (Intuition))
+         and (not (is_composed_of some Intuition))
+    
+    SubClassOf: 
+        An_Sich_Realm
+    
+    
+Class: Concepts
+
+    SubClassOf: 
+        Idea
+    
+    
+Class: Conceptual_Propositions
+
+    SubClassOf: 
+        Proposition,
+        is_composed_of only Concepts
+    
+    
+Class: Empirical_Propositions
+
+    SubClassOf: 
+        Proposition,
+        (is_composed_of some Concepts)
+         and (is_composed_of some Intuitions)
+         and (is_composed_of min 3 Idea),
+        
+            Annotations: rdfs:comment "This statement is redundant wrt to the first one."
+        is_composed_of some 
+            (Concepts or Intuitions)
+    
+    
+Class: External_Quality
+
+    EquivalentTo: 
+        belongs_to some Aggregate
+    
+    SubClassOf: 
+        Quality
+    
+    
+Class: Idea
+
+    EquivalentTo: 
+        (not (Proposition))
+         and (is_part_of some Proposition)
+    
+    SubClassOf: 
+        An_Sich_Realm,
+        refers_to only Ontological_Realm
+    
+    
+Class: Internal_Quality
+
+    SubClassOf: 
+        Quality
+    
+    
+Class: Intuition
+
+    EquivalentTo: 
+        Simple_Idea
+         and Singular_Idea
+    
+    SubClassOf: 
+        An_Sich_Realm
+    
+    
+Class: Intuitions
+
+    SubClassOf: 
+        Idea
+    
+    
+Class: Judgment
+
+    SubClassOf: 
+        Mental_Realm,
+        has_an_sich_counterpart some Proposition
+    
+    
+Class: Linguistic_Realm
+
+    SubClassOf: 
+        Ontological_Realm,
+        Real
+    
+    DisjointWith: 
+        An_Sich_Realm, Mental_Realm
+    
+    
+Class: Manifold
+
+    SubClassOf: 
+        Aggregate
+    
+    
+Class: Mental_Realm
+
+    SubClassOf: 
+        Ontological_Realm,
+        Real
+    
+    DisjointWith: 
+        An_Sich_Realm, Linguistic_Realm
+    
+    
+Class: Not_Consequences
+
+    SubClassOf: 
+        Proposition
+    
+    
+Class: Not_Real
+
+    DisjointWith: 
+        Real
+    
+    
+Class: Object
+
+    
+Class: Objectless_Idea
+
+    SubClassOf: 
+        Idea,
+        not (refers_to some owl:Thing)
+    
+    DisjointWith: 
+        Objectual_Idea
+    
+    
+Class: Objectual_Idea
+
+    SubClassOf: 
+        Idea,
+        refers_to some owl:Thing
+    
+    DisjointWith: 
+        Objectless_Idea
+    
+    
+Class: Ontological_Realm
+
+    
+Class: Proposition
+
+    SubClassOf: 
+        An_Sich_Realm,
+        
+            Annotations: rdfs:comment "not sure whehter this is a happy formalization"
+        grounds some Proposition,
+        is_composed_of only Idea,
+        is_composed_of exactly 3 Idea
+    
+    
+Class: Pure_Object
+
+    EquivalentTo: 
+        Object
+         and (not (Quality)),
+        not (refers_to some owl:Thing)
+    
+    
+Class: Quality
+
+    EquivalentTo: 
+        belongs_to some owl:Thing
+    
+    SubClassOf: 
+        Object
+    
+    
+Class: Real
+
+    DisjointWith: 
+        Not_Real
+    
+    
+Class: Simple_Idea
+
+    SubClassOf: 
+        Idea,
+        is_composed_of exactly 1 Idea
+    
+    
+Class: Simple_Object
+
+    EquivalentTo: 
+        not (is_composed_of some owl:Thing)
+    
+    SubClassOf: 
+        Object
+    
+    
+Class: Singular_Idea
+
+    SubClassOf: 
+        Idea,
+        Objectual_Idea
+         and (refers_to exactly 2 owl:Thing)
+    
+    
+Class: Subjective_Idea
+
+    SubClassOf: 
+        Appearance,
+        Mental_Realm,
+        has_an_sich_counterpart some Idea
+    
+    
+Class: Substance
+
+    EquivalentTo: 
+        Pure_Object
+         and Real
+    
+    
+Class: Sum
+
+    SubClassOf: 
+        Aggregate
+    
+    
+Class: Symbolic_Idea
+
+    SubClassOf: 
+        Idea,
+        (refers_to some Idea)
+         and (refers_to only Idea)
+    
+    
+Class: Truths
+
+    SubClassOf: 
+        Proposition
+    
+    
+Class: owl:Thing
+
+    
+Individual: not_a_consequence
+
+    Types: 
+        
+            Annotations: rdfs:comment "the existence of this individual in the Not_Consequences class is to encode that there is a Proposition that is not a Consequence"
+        Not_Consequences
+    
+    

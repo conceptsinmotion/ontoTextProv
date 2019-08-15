@@ -1,0 +1,224 @@
+Prefix: : <http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-62#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-62>
+
+
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Adherence>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Quality>,
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Real>
+    
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Aggregate>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Object>
+    
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#An_Sich_Realm>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Not_Real>,
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Ontological_Realm>
+    
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Appearance>
+
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Complex_Idea>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Aggregate>,
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Idea>
+    
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Concept>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#An_Sich_Realm>
+    
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Concepts>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Idea>
+    
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Conceptual_Propositions>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Proposition>
+    
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Empirical_Propositions>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Proposition>
+    
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#External_Quality>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Quality>
+    
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Idea>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#An_Sich_Realm>
+    
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Internal_Quality>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Quality>
+    
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Intuition>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Simple_Idea>,
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Singular_Idea>
+    
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Intuitions>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Idea>
+    
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Judgment>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Mental_Realm>
+    
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Linguistic_Realm>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Ontological_Realm>,
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Real>
+    
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Manifold>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Aggregate>
+    
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Mental_Realm>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Ontological_Realm>,
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Real>
+    
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Not_Consequences>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Proposition>
+    
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Not_Real>
+
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Object>
+
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Objectless_Idea>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Idea>,
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Pure_Object>
+    
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Objectual_Idea>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Idea>
+    
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Ontological_Realm>
+
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Proposition>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Aggregate>,
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#An_Sich_Realm>
+    
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Pure_Object>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Object>
+    
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Quality>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Object>
+    
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Real>
+
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Simple_Idea>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Idea>
+    
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Simple_Object>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Concept>,
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Object>
+    
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Singular_Idea>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Objectual_Idea>
+    
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Subjective_Idea>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Appearance>,
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Mental_Realm>
+    
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Substance>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Pure_Object>,
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Real>
+    
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Sum>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Aggregate>
+    
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Symbolic_Idea>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Idea>
+    
+    
+Class: <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Truths>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/sh/ontologies/2017/11/untitled-ontology-8#Proposition>
+    
+    
