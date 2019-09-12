@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#"
+     xml:base="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#refersTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#refersTo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#Common_Idea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#Common_Idea">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#Idea"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#refersTo"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#Idea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#Idea">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#Objectless_Idea"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#Objectual_Idea"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#Object"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#NotIdea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#NotIdea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#NotIdea">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#Object -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#Object"/>
+    
+
+
+    <!-- http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#Objectless_Idea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#Objectless_Idea">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#Idea"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#Objectual_Idea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#Objectual_Idea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#Objectual_Idea">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#refersTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#Object"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#Idea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#Singular_Idea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#Singular_Idea">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#Idea"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#refersTo"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#Symbolic_Idea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#Symbolic_Idea">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#refersTo"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#Idea"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#refersTo"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#Idea"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/veruskazamborlini/ontologies/2019/7/untitled-ontology-67#Idea"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
