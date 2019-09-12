@@ -1,0 +1,803 @@
+@prefix lemon: <http://lemon-model.net/lemon#> .
+@prefix blz_ont: <https://conceptsinmotion.org/e-ideas/ontologies/bolzano#> .
+@prefix : <https://conceptsinmotion.org/e-ideas/lexicon/bolzano#> .
+@prefix dt: <https://conceptsinmotion.org/e-ideas/datatype/> .
+@prefix vocab: <https://conceptsinmotion.org/e-ideas/vocaulary/> .
+
+dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
+
+###############################################################################
+# LEXICONS
+###############################################################################
+
+:en_bolzano_lexicon lemon:topic [ lemon:value "English vocabulary associated to Bolzano's Theory of Ideas" ] ;
+                 vocab:language vocab:English ;
+                 lemon:entry  :object, :idea, :refersTo, :common_idea, :objectless_idea,
+                              :objectual_idea, :singular_idea , :symbolic_idea, :imaginary_idea, :real_idea .
+
+:de_bolzano_lexicon lemon:topic [ lemon:value "German vocabulary used by Bolzano in Theory of Ideas" ] ;
+                 vocab:language vocab:German ;
+                 lemon:entry :gegenstand, :vorstellung , :gemein_vorstellung ,
+                             :gegenstandslos_vorstellung , :gegenständlich_vorstellung ,
+                             :einzel_vorstellung , :symbolische_vorstellung, :imaginäre_vorstellung,
+                             :reale_vorstellung  . # ...
+
+
+###############################################################################
+# LEXICAL ENTRIES
+###############################################################################
+
+# ----- ENGLISH ----- #
+
+
+:object a lemon:LexicalEntry, lemon:Word ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "object"@en ] ;
+    lemon:sense [ lemon:reference   blz_ont:Object ;
+                  # lemon:contex      ??? ;
+                  lemon:definition  :object_sense_bolz ] .
+
+:idea a lemon:LexicalEntry, lemon:Word ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "idea"@en ] ;
+    lemon:sense [ lemon:reference   blz_ont:Idea ;
+                  # lemon:contex      ??? ;
+                  lemon:definition  :idea_sense_bolz ] .
+
+:refersTo a lemon:LexicalEntry ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "refers to"@en ] ;
+    lemon:sense [ lemon:reference   blz_ont:refersTo ;
+                  # lemon:contex      ??? ;
+                  lemon:definition  :refersTo_sense_bolz ] .
+
+:common_idea a lemon:LexicalEntry, lemon:Phrase ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "common idea"@en ] ;
+    lemon:sense [ lemon:reference   blz_ont:Common_Idea ;
+                  # lemon:contex      ??? ;
+                  lemon:definition  :common_idea_sense_bolz ] ;
+    lemon:decomposition (
+      [ lemon:element :common ]
+      [ lemon:element :idea ] ) .
+
+:objectless_idea a lemon:LexicalEntry, lemon:Phrase ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "objectless idea"@en ] ;
+    lemon:sense [ lemon:reference   blz_ont:Objectless_Idea ;
+                  # lemon:contex      ??? ;
+                  lemon:definition  :objectless_idea_sense_bolz ] ;
+    lemon:decomposition (
+      [ lemon:element :objectless ]
+      [ lemon:element :idea ] ) .
+
+:objectual_idea a lemon:LexicalEntry, lemon:Phrase ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "objectual idea"@en ] ;
+    lemon:sense [ lemon:reference   blz_ont:Objectual_Idea ;
+                  # lemon:contex      ??? ;
+                  lemon:definition  :objectual_idea_sense_bolz ] ;
+    lemon:decomposition (
+      [ lemon:element :objectual ]
+      [ lemon:element :idea ] ) .
+
+:singular_idea a lemon:LexicalEntry, lemon:Phrase ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "singular idea"@en ] ;
+    lemon:sense [ lemon:reference   blz_ont:Singular_Idea ;
+                  # lemon:contex      ??? ;
+                  lemon:definition  :singular_idea_sense_bolz ] ;
+    lemon:decomposition (
+      [ lemon:element :singular ]
+      [ lemon:element :idea ] ) .
+
+:symbolic_idea a lemon:LexicalEntry, lemon:Phrase ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "symbolic idea"@en ] ;
+    lemon:sense [ lemon:reference   blz_ont:Symbolic_Idea ;
+                  # lemon:contex      ??? ;
+                  lemon:definition  :symbolic_idea_sense_bolz ] ;
+    lemon:decomposition (
+      [ lemon:element :symbolic ]
+      [ lemon:element :idea ] ) .
+
+:imaginary_idea a lemon:LexicalEntry, lemon:Phrase ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "imaginary idea"@en ] ;
+    lemon:sense [ lemon:reference   blz_ont:Imaginary_Idea ;
+                  # lemon:contex      ??? ;
+                  lemon:definition  :imaginary_idea_sense_bolz ] ;
+    lemon:decomposition (
+      [ lemon:element :imaginary ]
+      [ lemon:element :idea ] ) .
+
+:real_idea a lemon:LexicalEntry, lemon:Phrase ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "real idea"@en ] ;
+    lemon:sense [ lemon:reference   blz_ont:Real_Idea ;
+                  # lemon:contex      ??? ;
+                  lemon:definition  :real_idea_sense_bolz ] ;
+    lemon:decomposition (
+      [ lemon:element :real ]
+      [ lemon:element :idea ] ) .
+
+:common   a lemon:Word ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "common"@en ] .
+
+:objectless   a lemon:Word ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "objectless"@en ] .
+
+:objectual   a lemon:Word ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "objectual"@en ] .
+
+:singular   a lemon:Word ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "singular"@en ] .
+
+:symbolic   a lemon:Word ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "symbolic"@en ] .
+
+:imaginary   a lemon:Word ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "imaginary"@en ] .
+
+:real   a lemon:Word ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "real"@en ] .
+
+# ----- GERMAN ----- #
+
+:gegenstand a lemon:LexicalEntry, lemon:Word ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "gegenstand"@de ] ;
+    lemon:sense [ # lemon:contex      ??? ;
+                  lemon:definition  :gegenstand_sense_bolz ] .
+
+:vorstellung a lemon:LexicalEntry, lemon:Word ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "vorstellung"@de ] ;
+    lemon:sense [ # lemon:contex      ??? ;
+                  lemon:definition  :vorstellung_sense_bolz ] .
+
+# X bezeichnet Y, X bezieht sich auf, X stellt Y vor, X umfasst Y
+
+:gemein_vorstellung a lemon:LexicalEntry, lemon:Phrase ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "gemein vorstellung"@de ] ;
+    lemon:sense [ # lemon:contex      ??? ;
+                  lemon:definition  :gemein_vorstellung_sense_bolz ] ;
+    lemon:decomposition (
+      [ lemon:element :gemein ]
+      [ lemon:element :vorstellung ] ) .
+
+:gegenstandslos_vorstellung a lemon:LexicalEntry, lemon:Phrase ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "gegenstandslos vorstellung"@de ] ;
+    lemon:sense [ # lemon:contex      ??? ;
+                  lemon:definition  :gegenstandslos_vorstellung_sense_bolz ] ;
+    lemon:decomposition (
+      [ lemon:element :gegenstandslos ]
+      [ lemon:element :vorstellung ] ) .
+
+:gegenständlich_vorstellung a lemon:LexicalEntry, lemon:Phrase ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "gegenständlich vorstellung"@de ] ;
+    lemon:sense [ # lemon:contex      ??? ;
+                  lemon:definition  :gegenständlich_vorstellung_sense_bolz ] ;
+    lemon:decomposition (
+      [ lemon:element :gegenstandslos ]
+      [ lemon:element :vorstellung ] ) .
+
+:einzel_vorstellung a lemon:LexicalEntry, lemon:Phrase ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "einzel vorstellung"@de ] ;
+    lemon:sense [ # lemon:contex      ??? ;
+                  lemon:definition  :einzel_vorstellung_sense_bolz ] ;
+    lemon:decomposition (
+      [ lemon:element :einzel ]
+      [ lemon:element :vorstellung ] ) .
+
+:symbolische_vorstellungen a lemon:LexicalEntry, lemon:Phrase ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "symbolische vorstellungen"@de ] ;
+    lemon:sense [ # lemon:contex      ??? ;
+                  lemon:definition  :symbolische_vorstellungen_sense_bolz ] ;
+    lemon:decomposition (
+      [ lemon:element :symbolische ]
+      [ lemon:element :vorstellung ] ) .
+
+:imaginäre_vorstellungen a lemon:LexicalEntry, lemon:Phrase ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "imaginäre vorstellungen"@de ] ;
+    lemon:sense [ # lemon:contex      ??? ;
+                  lemon:definition  :imaginäre_vorstellungen_sense_bolz ] ;
+    lemon:decomposition (
+      [ lemon:element :imaginäre ]
+      [ lemon:element :vorstellung ] ) .
+
+:reale_vorstellungen a lemon:LexicalEntry, lemon:Phrase ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "reale vorstellungen"@de ] ;
+    lemon:sense [ # lemon:contex      ??? ;
+                  lemon:definition  :reale_vorstellungen_sense_bolz ] ;
+    lemon:decomposition (
+      [ lemon:element :reale ]
+      [ lemon:element :vorstellung ] ) .
+
+:gemein   a lemon:Word ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "gemein"@de ] .
+
+:gegenstandslos   a lemon:Word ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "gegenstandslos"@de ] .
+
+:gegenständlich   a lemon:Word ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "gegenständlich"@de ] .
+
+:einzel   a lemon:Word ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "einzel"@de ] .
+
+:symbolische   a lemon:Word ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "symbolische"@de ] .
+
+:imaginäre   a lemon:Word ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "imaginäre"@de ] .
+
+:reale   a lemon:Word ;
+    lemon:canonicalForm [ a lemon:LexicalForm ; lemon:writtenRep "reale"@de ] .
+
+# IMAGINARY		?			imaginäre, leere, unmögliche
+
+
+###############################################################################
+# SENSES' DEFINITION AND PROVENANCE
+###############################################################################
+
+# ---------------- PROPONENTS/PHILOSOPHERS  --------------------- #
+:bolzanoBernard a schema:Person ;
+              owl:sameAs <https://viaf.org/viaf/24615537> .
+
+:bettiArianna a schema:Person ;
+              owl:sameAs <https://viaf.org/viaf/313490465> .
+
+:ginammiAnnapaola a schema:Person ;
+              rdfs:label 'Annapaola Ginammi' ;
+              owl:sameAs <https://dblp.org/pers/w/Wierst:Pauline_van> .
+
+# ---------------- THEORIES --------------------- #
+:bolzano_theory_of_ideas a vocab:Theory ;
+    lemon:topic [ lemon:value "Bolzano's Theory of Ideas" ] ;
+    vocab:proposed_by    :bolzanoBernard ;
+    vocab:is_composed_of :gegenstand_sense_bolz, :vorstellung_sense_bolz , :gemein_vorstellung_sense_bolz ,
+                      :gegenstandslos_vorstellung_sense_bolz , :gegenständlich_vorstellung_sense_bolz ,
+                      :einzel_vorstellung_sense_bolz , :symbolische_vorstellung_sense_bolz,
+                      :imaginäre_vorstellung_sense_bolz, :reale_vorstellung_sense_bolz. # ...
+
+
+:interp_of_bolzano_theory_of_ideas a vocab:Theory ;
+    lemon:topic [ lemon:value "Bolzano's Theory of Ideas interpreted by Arianna Betti" ] ;
+    vocab:interpretationOf :bolzano_theory_of_ideas ;
+    vocab:proposed_by    :bettiArianna, :ginammiAnnapaola ;
+    vocab:is_composed_of :object_sense_bolz, :idea_sense_bolz, :refersTo_sense_bolz ,
+                      :common_idea_sense_bolz, :objectless_idea_sense_bolz ,
+                      :objectual_idea_sense_bolz, :singular_idea_sense_bolz ,
+                      :symbolic_idea_sense_bolz, :imaginary_idea_sense_bolz,
+                      :real_idea_sense_bolz.
+
+:revised_interp_of_bolzano_theory_of_ideas a vocab:Theory ;
+    lemon:topic [ lemon:value "Bolzano's Theory of Ideas interpreted by Arianna Betti" ] ;
+    vocab:interpretationOf :bolzano_theory_of_ideas ;
+    vocab:revisionOf       :interp_of_bolzano_theory_of_ideas ;
+    vocab:proposed_by    :bettiArianna, :ginammiAnnapaola ;
+    vocab:is_composed_of :object_sense_bolz, :idea_sense_bolz, :refersTo_sense_bolz ,
+                      :common_idea_sense_bolz, :objectless_idea_sense_bolz ,
+                      :objectual_idea_sense_bolz, :singular_idea_sense_bolz ,
+                      :symbolic_idea_sense_bolz , :imaginary_idea_sense_bolz,
+                      :real_idea_sense_bolz.
+
+# Betti, Arianna. ‘Bolzano’s Universe: Truth, Logic and Metaphysics’. In Categories of Being: Essays on Metaphysics and Logic, edited by Leila Haaparanta and Heikki J. Koskinen, 167–190. Oxford: Oxford University Press, 2012. https://1drv.ms/b/s!AgPq3zEkkYuOsFrbsytkO6dh2jGO.
+#
+# Van Wierst, Pauline. “Salva Veritate – A Master Thesis on Bolzanian Analyticity and Computational Methods within Philosophical Research.” MA Thesis, Vrije Universiteit Amsterdam, 2013.
+#
+# https://plato.stanford.edu/search/searcher.py?query=bolzano
+
+
+# -------------------------------------- #
+# ----- Bolzano's Theory of Ideas  ----- #
+
+# ----- gegenstand ----- #
+# SENSE
+:gegenstand_sense_bolz   a lemon:LexicalSense ;
+    lemon:value       "..."@de .
+
+# ANNOTATION
+:gegenstand_sense_bolz_annotation a oa:Annotation ;
+    oa:hasBody :gegenstand_sense_bolz ;
+    oa:hasTarget [
+        oa:hasSource <https://checkitout.org> ;
+        oa:hasSelector [
+            a oa:TextQuoteSelector ;
+            oa:exact  "CHECK IT OUT" ;
+            oa:prefix "..." ;
+            oa:suffix "..." ] ] .
+
+
+# ----- vorstellung ----- #
+# SENSE
+ :vorstellung_sense_bolz   a lemon:LexicalSense ;
+     lemon:value       "..."@de .
+
+ # ANNOTATION
+ :vorstellung_sense_bolz_annotation a oa:Annotation ;
+     oa:hasBody :vorstellung_sense_bolz ;
+     oa:hasTarget [
+         oa:hasSource <https://checkitout.org> ;
+         oa:hasSelector [
+             a oa:TextQuoteSelector ;
+             oa:exact  "CHECK IT OUT" ;
+             oa:prefix "..." ;
+             oa:suffix "..." ] ] .
+
+# ----- gemein_vorstellung ----- #
+# SENSE
+:gemein_vorstellung_sense_bolz   a lemon:LexicalSense ;
+    lemon:value       "..."@de .
+
+# ANNOTATION
+:gemein_vorstellung_sense_bolz_annotation a oa:Annotation ;
+    oa:hasBody :gemein_vorstellung_sense_bolz ;
+    oa:hasTarget [
+        oa:hasSource <https://checkitout.org> ;
+        oa:hasSelector [
+            a oa:TextQuoteSelector ;
+            oa:exact  "CHECK IT OUT" ;
+            oa:prefix "..." ;
+            oa:suffix "..." ] ] .
+
+# ----- gegenstandslos_vorstellung ----- #
+# SENSE
+:gegenstandslos_vorstellung_sense_bolz  a lemon:LexicalSense ;
+    lemon:value       "..."@de .
+
+# ANNOTATION
+:gegenstandslos_vorstellung_sense_bolz_annotation a oa:Annotation ;
+    oa:hasBody :gegenstandslos_vorstellung_sense_bolz ;
+    oa:hasTarget [
+        oa:hasSource <https://checkitout.org> ;
+        oa:hasSelector [
+            a oa:TextQuoteSelector ;
+            oa:exact  "CHECK IT OUT" ;
+            oa:prefix "..." ;
+            oa:suffix "..." ] ] .
+
+# ----- gegenständlich_vorstellung ----- #
+# SENSE
+:gegenständlich_vorstellung_sense_bolz   a lemon:LexicalSense ;
+    lemon:value       "..."@de .
+
+# ANNOTATION
+:gegenständlich_vorstellung_sense_bolz_annotation a oa:Annotation ;
+    oa:hasBody :gegenständlich_vorstellung_sense_bolz ;
+    oa:hasTarget [
+        oa:hasSource <https://books.google.nl/books?id=NbgAAAAAcAAJ&pg=PA222> ;
+        oa:hasSelector [
+            a oa:TextQuoteSelector ;
+            oa:exact  "CHECK IT OUT" ;
+            oa:prefix "..." ;
+            oa:suffix "..." ] ] .
+
+# ----- einzel_vorstellung ----- #
+# SENSE
+:einzel_vorstellung_sense_bolz a lemon:LexicalSense ;
+    lemon:value       "..."@de .
+
+# ANNOTATION
+:einzel_vorstellung_sense_bolz_annotation a oa:Annotation ;
+    oa:hasBody :einzel_vorstellung_sense_bolz ;
+    oa:hasTarget [
+        oa:hasSource <https://checkitout.org> ;
+        oa:hasSelector [
+            a oa:TextQuoteSelector ;
+            oa:exact  "CHECK IT OUT" ;
+            oa:prefix "..." ;
+            oa:suffix "..." ] ] .
+
+# ----- symbolische_vorstellung ----- #
+# SENSE
+:symbolische_vorstellungen_sense_bolz a lemon:LexicalSense ;
+    lemon:value       "..."@de .
+#     vocab:hasPart       :symbolische_vorstellung_sense_partX_bolz ;
+#     vocab:by            :bolzanoBernard ;
+#
+#
+# :symbolische_vorstellung_sense_partX_bolz a lemon:LexicalSense ;
+#     lemon:value       "Es kann aber auch symbolische Vorstellungen geben, welche imaginär sind"@de ;
+#     vocab:literalTransalation "But there can also be symbolic ideas that are imaginary"@en .
+
+
+:symbolische_vorstellung_sense_partX_bolz_annotation a oa:Annotation ;
+    oa:hasBody :symbolische_vorstellungen_sense_bolz ; #:symbolische_vorstellung_sense_partX_bolz ;
+    oa:hasTarget [
+        # oa:hasSource <https://play.google.com/books/reader?id=tLU9AAAAIAAJ&pg=GBS.PR4> ;
+        oa:hasSource <https://books.google.nl/books?id=NbgAAAAAcAAJ&pg=PA426> ;
+        oa:hasSelector [
+            a oa:TextQuoteSelector ;
+            oa:exact  "Es kann aber auch symbolische Vorstellungen geben, welche imaginär sind" ;
+            oa:prefix "Vorstellungsvorstellungen nennen. " ;
+            oa:suffix "; und gerade" ] ] .
+
+# ----- imaginäre_vorstellung ----- #
+# SENSE
+:imaginäre_vorstellung_sense_bolz    a lemon:LexicalSense ;
+    lemon:value       "..."@de .
+
+# ANNOTATION
+:imaginäre_vorstellung_sense_bolz_annotation a oa:Annotation ;
+    oa:hasBody :imaginäre_vorstellung_sense_bolz ;
+    oa:hasTarget [
+        oa:hasSource <https://books.google.nl/books?id=WapeAAAAcAAJ&pg=PA315> ;
+        oa:hasSelector [
+            a oa:TextQuoteSelector ;
+            oa:exact  "CHECK IT OUT" ;
+            oa:prefix "..." ;
+            oa:suffix "..." ] ] .
+
+# ----- imaginäre_vorstellung ----- #
+# SENSE
+:reale_vorstellung_sense_bolz    a lemon:LexicalSense ;
+    lemon:value       "..."@de .
+
+# ANNOTATION
+:reale_vorstellung_sense_bolz_annotation a oa:Annotation ;
+    oa:hasBody :reale_vorstellung_sense_bolz ;
+    oa:hasTarget [
+        oa:hasSource <https://books.google.nl/books?id=WapeAAAAcAAJ&pg=PA315> ;
+        oa:hasSelector [
+            a oa:TextQuoteSelector ;
+            oa:exact  "CHECK IT OUT" ;
+            oa:prefix "..." ;
+            oa:suffix "..." ] ] .
+
+# -------------------------------------------------------------------#
+# ----- Bolzano's Theory of Ideas interpreted by Betti or Ginammi ----- #
+
+# ----- OBJECT ----- #
+# SENSE
+:object_sense_bolz     a lemon:LexicalSense ;
+    lemon:value       "Objects can be ideas or not ideas"@en ;
+    vocab:interpretationOf  :gegenstand_sense_bolz ;
+    lemon:condition
+        [ a lemon:SenseDefinition ;
+                  lemon:value """
+          Class: Object
+          EquivalentTo: Idea or NotIdea"""^^dt:OWL_Manchester
+          ## certainty ??
+        ] .
+
+# ANNOTATION
+:object_sense_bolz_annotation a oa:Annotation ;
+    oa:hasBody :object_sense_bolz ;
+    oa:hasTarget [
+        oa:hasSource <https://checkitout.org> ;
+        oa:hasSelector [
+            a oa:TextQuoteSelector ;
+            oa:exact  "CHECK IT OUT" ;
+            oa:prefix "..." ;
+            oa:suffix "..." ] ] .
+
+
+# ----- IDEA ----- #
+# SENSE
+:idea_sense_bolz    a lemon:LexicalSense ;
+    lemon:value       "ideas are types of obejects that can refers to objects, objectual idea, or not, objectless idea."@en ;
+    vocab:interpretationOf  :vorstellung_sense_bolz ;
+    lemon:condition
+        [ a lemon:SenseDefinition ;
+          lemon:value """
+          Class: Idea
+          EquivalentTo: Objectless_Idea or Objectual_Idea
+          EquivalentTo: Real_Idea or Imaginary_Idea
+          SubClassOf: Object
+          DisjointWith: NotIdea"""^^dt:OWL_Manchester
+        ] .
+
+# ANNOTATION
+:idea_sense_bolz_annotation a oa:Annotation ;
+    oa:hasBody :idea_sense_bolz ;
+    oa:hasTarget [
+        oa:hasSource <https://checkitout.org> ;
+        oa:hasSelector [
+            a oa:TextQuoteSelector ;
+            oa:exact  "CHECK IT OUT" ;
+            oa:prefix "..." ;
+            oa:suffix "..." ] ] .
+
+
+# ----- REFERS-TO ----- #
+# SENSE
+:refersTo_sense_bolz    a lemon:LexicalSense ;
+    lemon:value       "..."@en ;
+    # vocab:interpretationOf  ;
+    lemon:condition
+        [ a lemon:SenseDefinition ;
+          lemon:value """
+          ObjectProperty: refersTo
+          Range: Idea
+          Domain: Object """^^dt:OWL_Manchester ### ?????????????????????
+        ] .
+
+# ANNOTATION
+:refersTo_sense_bolz_annotation a oa:Annotation ;
+    oa:hasBody :refersTo_sense_bolz ;
+    oa:hasTarget [
+        oa:hasSource <https://checkitout.org> ;
+        oa:hasSelector [
+            a oa:TextQuoteSelector ;
+            oa:exact  "CHECK IT OUT" ;
+            oa:prefix "..." ;
+            oa:suffix "..." ] ] .
+
+  # Class: NotIdea
+  #
+  #     SubClassOf:
+  #         Object
+  #
+  #     DisjointWith:
+  #         Idea
+
+
+# ----- COMMON IDEA ----- #
+# SENSE
+:common_idea_sense_bolz    a lemon:LexicalSense ;
+    lemon:value       "common ideas are ..."@en ;
+    vocab:interpretationOf  :gemein_vorstellung_sense_bolz ;
+    lemon:condition
+        [ a lemon:SenseDefinition ;
+          lemon:value """
+          Class: Common_Idea
+          SubClassOf:
+              Idea,
+              refersTo min 2 Object """^^dt:OWL_Manchester
+        ] .
+
+# ANNOTATION
+:common_idea_sense_bolz_annotation a oa:Annotation ;
+    oa:hasBody :common_idea_sense_bolz ;
+    oa:hasTarget [
+        oa:hasSource <https://checkitout.org> ;
+        oa:hasSelector [
+            a oa:TextQuoteSelector ;
+            oa:exact  "CHECK IT OUT" ;
+            oa:prefix "..." ;
+            oa:suffix "..." ] ] .
+
+
+# ----- OBJECTLESS IDEA ----- #
+# SENSE
+:objectless_idea_sense_bolz    a lemon:LexicalSense ;
+    lemon:value       "objectless ideas are ..."@en ;
+    vocab:interpretationOf  :gegenstandslos_vorstellung_sense_bolz ;
+    lemon:condition
+        [ a lemon:SenseDefinition ;
+          lemon:value """
+          Class: Objectless_Idea
+          SubClassOf: Idea
+          DisjointWith: Objectual_Idea """^^dt:OWL_Manchester
+        ] .
+
+# ANNOTATION
+:objectless_idea_sense_bolz_annotation a oa:Annotation ;
+    oa:hasBody :objectless_idea_sense_bolz ;
+    oa:hasTarget [
+        oa:hasSource <https://checkitout.org> ;
+        oa:hasSelector [
+            a oa:TextQuoteSelector ;
+            oa:exact  "CHECK IT OUT" ;
+            oa:prefix "..." ;
+            oa:suffix "..." ] ] .
+
+
+# ----- OBJECTUAL IDEA ----- #
+# SENSE
+:objectual_idea_sense_bolz    a lemon:LexicalSense ;
+    lemon:value       "objectual ideas are ..."@en ;
+    vocab:interpretationOf  :gegenständlich_vorstellung_sense_bolz ;
+    lemon:condition
+        [ a lemon:SenseDefinition ;
+          lemon:value """
+          Class: Objectual_Idea
+          EquivalentTo: refersTo some Object
+          SubClassOf: Idea
+          DisjointWith: Objectless_Idea """^^dt:OWL_Manchester
+        ] .
+
+# ANNOTATION
+:objectual_idea_sense_bolz_annotation a oa:Annotation ;
+    oa:hasBody :objectual_idea_sense_bolz ;
+    oa:hasTarget [ #169
+        oa:hasSource <https://onedrive.live.com/?authkey=%21ANuzK2Q7p2HaMY4&cid=8E8B912431DFEA03&id=8E8B912431DFEA03%216234&parId=8E8B912431DFEA03%216233&o=OneUp> ;
+        oa:hasSelector [
+            a oa:TextQuoteSelector ;
+            oa:exact  "CHECK IT OUT" ;
+            oa:prefix "..." ;
+            oa:suffix "..." ] ] .
+
+
+# ----- SINGULAR IDEA ----- #
+# SENSE
+:singular_idea_sense_bolz    a lemon:LexicalSense ;
+    lemon:value       "singular ideas are ..."@en ;
+    vocab:interpretationOf  :einzel_vorstellung_sense_bolz ;
+    lemon:condition
+        [ a lemon:SenseDefinition ;
+          lemon:value """
+          Class: Singular_Idea
+          SubClassOf:
+            Idea,
+            refersTo exactly 1 Object
+          DisjointWith: Objectless_Idea """^^dt:OWL_Manchester
+        ] .
+
+# ANNOTATION
+:singular_idea_sense_bolz_annotation a oa:Annotation ;
+    oa:hasBody :singular_idea_sense_bolz ;
+    oa:hasTarget [
+        oa:hasSource <https://checkitout.org> ;
+        oa:hasSelector [
+            a oa:TextQuoteSelector ;
+            oa:exact  "CHECK IT OUT" ;
+            oa:prefix "..." ;
+            oa:suffix "..." ] ] .
+
+
+# ----- IMAGINARY IDEA ----- #
+# SENSE
+:imaginary_idea_sense_bolz    a lemon:LexicalSense ;
+    lemon:value       "imaginary ideas are ..."@en ;
+    vocab:interpretationOf  :imaginäre_vorstellung_sense_bolz ;
+    lemon:condition
+        [ a lemon:SenseDefinition ;
+          lemon:value """
+          Class: Imaginary_Idea
+          SubClassOf:
+            Objectless_Idea
+          DisjointWith: Real_Idea """^^dt:OWL_Manchester
+        ] .
+
+# ANNOTATION
+:imaginary_idea_sense_bolz_annotation a oa:Annotation ;
+    oa:hasBody :imaginary_idea_sense_bolz ;
+    oa:hasTarget [
+        oa:hasSource <https://checkitout.org> ;
+        oa:hasSelector [
+            a oa:TextQuoteSelector ;
+            oa:exact  "CHECK IT OUT" ;
+            oa:prefix "..." ;
+            oa:suffix "..." ] ] .
+
+# ----- REAL IDEA ----- #
+# SENSE
+:real_idea_sense_bolz    a lemon:LexicalSense ;
+    lemon:value       "real ideas are ..."@en ;
+    vocab:interpretationOf  :reale_vorstellung_sense_bolz ;
+    lemon:condition
+        [ a lemon:SenseDefinition ;
+          lemon:value """
+          Class: Real_Idea
+          SubClassOf:
+            Idea
+          DisjointWith: Imaginary_Idea """^^dt:OWL_Manchester
+        ] .
+
+# ANNOTATION
+:real_idea_sense_bolz_annotation a oa:Annotation ;
+    oa:hasBody :real_idea_sense_bolz ;
+    oa:hasTarget [
+        oa:hasSource <https://checkitout.org> ;
+        oa:hasSelector [
+            a oa:TextQuoteSelector ;
+            oa:exact  "CHECK IT OUT" ;
+            oa:prefix "..." ;
+            oa:suffix "..." ] ] .
+
+# ----- SYMBOLIC IDEA ----- #
+# SENSE
+:symbolic_idea_sense_bolz    a lemon:LexicalSense ;
+    lemon:value       "symbolic ideas are ..."@en ;
+    vocab:interpretationOf  :symbolische_vorstellung_sense_bolz ;
+    lemon:condition
+        [ a lemon:SenseDefinition ;
+          lemon:value """
+          Class: Symbolic_Idea
+          EquivalentTo: (refersTo some Idea) and (refersTo only Idea)
+          SubClassOf: Idea """^^dt:OWL_Manchester
+        ] .
+
+
+# ANNOTATION
+:symbolic_idea_sense_bolz_annotation a oa:Annotation ;
+    oa:hasBody :symbolic_idea_sense_bolz ;
+    oa:hasTarget [ #170
+        oa:hasSource <https://onedrive.live.com/?authkey=%21ANuzK2Q7p2HaMY4&cid=8E8B912431DFEA03&id=8E8B912431DFEA03%216234&parId=8E8B912431DFEA03%216233&o=OneUp> ;
+        oa:hasSelector [
+            a oa:TextQuoteSelector ;
+            oa:exact  "CHECK IT OUT" ;
+            oa:prefix "..." ;
+            oa:suffix "..." ] ] .
+
+############ INFERENCE #################
+:symbolic_idea_sense_bolz_inferred    a vocab:InferredSense ;
+    vocab:partOf              :symbolic_idea_sense_bolz ;
+    vocab:hasCounterEvidence   :symbolic_idea_revised_sense_bolz_annotation ;
+    lemon:condition
+        [ a lemon:SenseDefinition ;
+          lemon:value """
+          SubClassOf: Objectual_Idea """^^dt:OWL_Manchester ;
+          vocab:wasDerivedFrom  :inferenceX
+        ] .
+
+# ----- SYMBOLIC IDEA REVISED ----- #
+# SENSE
+:symbolic_idea_revised_sense_bolz    a lemon:LexicalSense ;
+    lemon:value       "symbolic ideas are ..."@en ;
+    vocab:interpretationOf  :symbolische_vorstellung_sense_bolz ;
+    vocab:revisionOf        :symbolic_idea_sense_bolz;
+    lemon:condition
+        [ a lemon:SenseDefinition ;
+          lemon:value """
+          Class: Symbolic_Idea
+          EquivalentTo: Imaginary_Idea or (refersTo some Idea) and (refersTo only Idea)
+          SubClassOf: Idea """^^dt:OWL_Manchester
+        ] .
+
+
+# ANNOTATION
+:symbolic_idea_revised_sense_bolz_annotation a oa:Annotation ;
+    oa:hasBody :symbolic_idea_revised_sense_bolz ;
+    oa:hasTarget [
+        oa:hasSource <https://books.google.nl/books?id=NbgAAAAAcAAJ&pg=PA426> ;
+        oa:hasSelector [
+            a oa:TextQuoteSelector ;
+            oa:exact  "Es kann aber auch symbolische Vorstellungen geben, welche imaginär sind" ;
+            oa:prefix "Vorstellungsvorstellungen nennen. " ;
+            oa:suffix "; und gerade" ] ] .
+
+
+# # ----- IMAGINARY IDEA ----- #
+# # SENSE
+# :imaginary_idea_sense_bolz
+#     lemon:value       "imaginary ideas are ..."@en ;
+#     vocab:interpretationOf  :imaginär_vorstellung_sense_bolz ;
+#     lemon:condition
+#         [ lemon:value """
+#           Class: Imaginary_Idea
+#           SubClassOf: Symbolic_Idea
+#           DisjointWith: Objectless_Idea """^^dt:OWL_Manchester
+#         ] .
+#
+#
+# # ANNOTATION
+# :imaginary_idea_sense_bolz_annotation a oa:Annotation ;
+#     oa:hasBody :imaginary_idea_sense_bolz ;
+#     oa:hasTarget [
+#         oa:hasSource <https://checkitout.org> ;
+#         oa:hasSelector [
+#             a oa:TextQuoteSelector ;
+#             oa:exact  "CHECK IT OUT" ;
+#             oa:prefix "..." ;
+#             oa:suffix "..." ] ] .
+#
+# # ----- OBJECTUAL SYMBOLIC IDEA ----- #
+# # SENSE
+# :objectual_symbolic_idea_sense_bolz
+#     lemon:value       "objectual symbolic ideas are ..."@en ;
+#     vocab:interpretationOf  :gegenständlich_symbolische_vorstellung_sense_bolz ;
+#     lemon:condition
+#         [ lemon:value """
+#           Class: Objectual_Symbolic_Idea
+#           SubClassOf: Symbolic_Idea
+#           DisjointWith: Imaginary_Idea """^^dt:OWL_Manchester
+#         ] .
+#
+#
+# # ANNOTATION
+# :symbolic_idea_sense_bolz_annotation a oa:Annotation ;
+#     oa:hasBody :symbolic_idea_sense_bolz ;
+#     oa:hasTarget [
+#         oa:hasSource <https://checkitout.org> ;
+#         oa:hasSelector [
+#             a oa:TextQuoteSelector ;
+#             oa:exact  "CHECK IT OUT" ;
+#             oa:prefix "..." ;
+#             oa:suffix "..." ] ] .
+
+
+## check relevant result / scenario
+    # From silvan's example ->
+    # think of how to record the process of refusing a particular part of the Interpretation
+    # based on one or more conflicting infererencing ...
+
+# How to say that Arianna says that Bolzano said A and B …. And from both follows C (literal reproduction (citation in quotes), rephrasing/interpreting (citation without quotes), translating)
+# When producing inferences, one should be able to filter the set of propositions that will be part of the reasoning, and whatever consequences produced should make this explicit.
+# Process of building an ontology or complementing or just reusing. State if a concept has being defined already or not. Also who has formalised it and when.
+# First time a term is used at all or in a specific sense.
+# Proponent changes his/het mind.
+
+### how to align it with proposal/belief, annotation and factoid
