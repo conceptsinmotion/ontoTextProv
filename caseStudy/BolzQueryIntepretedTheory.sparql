@@ -1,0 +1,9 @@
+select * WHERE {
+    
+   <https://conceptsinmotion.org/e-ideas/lexicon/bolzano#interp_of_bolzano_theory_of_ideas> 
+        <https://conceptsinmotion.org/e-ideas/vocaulary/is_composed_of>  ?sense .
+   ?sense <http://lemon-model.net/lemon#condition> ?senseDef .
+   ?senseDef a <http://lemon-model.net/lemon#SenseDefinition> ;
+        <http://lemon-model.net/lemon#value> ?def .
+    
+}
