@@ -1,8 +1,13 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix lemon: <http://lemon-model.net/lemon#> .
 @prefix blz_ont: <https://conceptsinmotion.org/e-ideas/ontologies/bolzano#> .
 @prefix : <https://conceptsinmotion.org/e-ideas/lexicon/bolzano#> .
 @prefix dt: <https://conceptsinmotion.org/e-ideas/datatype/> .
 @prefix vocab: <https://conceptsinmotion.org/e-ideas/vocaulary/> .
+@prefix oa: <https://www.w3.org/TR/annotation-vocab/#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
 dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
 
@@ -231,13 +236,13 @@ dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
 ###############################################################################
 
 # ---------------- PROPONENTS/PHILOSOPHERS  --------------------- #
-:bolzanoBernard a schema:Person ;
+:bolzanoBernard a foaf:Person ;
               owl:sameAs <https://viaf.org/viaf/24615537> .
 
-:bettiArianna a schema:Person ;
+:bettiArianna a foaf:Person ;
               owl:sameAs <https://viaf.org/viaf/313490465> .
 
-:ginammiAnnapaola a schema:Person ;
+:ginammiAnnapaola a foaf:Person ;
               rdfs:label 'Annapaola Ginammi' ;
               owl:sameAs <https://dblp.org/pers/w/Wierst:Pauline_van> .
 
