@@ -5,7 +5,7 @@
 @prefix blz_ont: <https://conceptsinmotion.org/e-ideas/ontologies/bolzano#> .
 @prefix : <https://conceptsinmotion.org/e-ideas/lexicon/bolzano#> .
 @prefix dt: <https://conceptsinmotion.org/e-ideas/datatype/> .
-@prefix vocab: <https://conceptsinmotion.org/e-ideas/vocaulary/> .
+@prefix vocab: <https://conceptsinmotion.org/e-ideas/vocabulary/> .
 @prefix oa: <https://www.w3.org/TR/annotation-vocab/#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
@@ -256,15 +256,22 @@ dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
                       :imaginäre_vorstellung_sense_bolz, :reale_vorstellung_sense_bolz. # ...
 
 
-:interp_of_bolzano_theory_of_ideas a vocab:Theory ;
-    lemon:topic [ lemon:value "Bolzano's Theory of Ideas interpreted by Arianna Betti" ] ;
+:interp_of_bolzano_theory_of_ideas a vocab:Theory ; ## Combination of Lexical Senses => Ontology
+    # lemon:topic [
+    lemon:value "Bolzano's Theory of Ideas interpreted by Arianna Betti" ;
     vocab:interpretationOf :bolzano_theory_of_ideas ;
     vocab:proposed_by    :bettiArianna, :ginammiAnnapaola ;
     vocab:is_composed_of :object_sense_bolz, :idea_sense_bolz, :refersTo_sense_bolz ,
                       :common_idea_sense_bolz, :objectless_idea_sense_bolz ,
                       :objectual_idea_sense_bolz, :singular_idea_sense_bolz ,
-                      :symbolic_idea_sense_bolz, :imaginary_idea_sense_bolz,
-                      :real_idea_sense_bolz.
+                      :symbolic_idea_sense_bolz, :imaginary_idea_sense_bolz ,
+                      :real_idea_sense_bolz ;
+    lemon:condition [ a lemon:SenseDefinition ;
+                      lemon:value """
+                      Ontology: <https://conceptsinmotion.org/e-ideas/vocabulary>"""^^dt:OWL_Manchester
+                     ] .
+
+
 
 :revised_interp_of_bolzano_theory_of_ideas a vocab:Theory ;
     lemon:topic [ lemon:value "Bolzano's Theory of Ideas interpreted by Arianna Betti" ] ;
@@ -290,72 +297,72 @@ dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
 # ----- gegenstand ----- #
 # SENSE
 :gegenstand_sense_bolz   a lemon:LexicalSense ;
-    lemon:value       "..."@de .
+    lemon:value       "Ich verstehe aber unter dem Gegenstande einer Vorstellung jenes (bald existirende, bald nicht existirende) Etwas, von dem wir zu sagen pflegen, daß sie es vorstelle, oder daß sie die Vorstellung davon sey."@de .
 
 # ANNOTATION
 :gegenstand_sense_bolz_annotation a oa:Annotation ;
     oa:hasBody :gegenstand_sense_bolz ;
     oa:hasTarget [
-        oa:hasSource <https://checkitout.org> ;
+        oa:hasSource <https://books.google.it/books?id=NbgAAAAAcAAJ&pg=PA69> ;
         oa:hasSelector [
             a oa:TextQuoteSelector ;
-            oa:exact  "CHECK IT OUT" ;
-            oa:prefix "..." ;
-            oa:suffix "..." ] ] .
+            oa:exact  "Ich verstehe aber unter dem Gegenstande einer Vorstellung jenes (bald existirende, bald nicht existirende) Etwas, von dem wir zu sagen pflegen, daß sie es vorstelle, oder daß sie die Vorstellung davon sey." ;
+            oa:prefix "beizulegen. " ;
+            oa:suffix "" ] ] .
 
 
 # ----- vorstellung ----- #
 # SENSE
  :vorstellung_sense_bolz   a lemon:LexicalSense ;
-     lemon:value       "..."@de .
+     lemon:value       "Wahr ist es freilich, daß jeder Satz Vorstellungen enthalte, aber nur als Theile, mit denen er selbst nicht von derselben Art ist."@de .
 
  # ANNOTATION
  :vorstellung_sense_bolz_annotation a oa:Annotation ;
      oa:hasBody :vorstellung_sense_bolz ;
      oa:hasTarget [
-         oa:hasSource <https://checkitout.org> ;
+         oa:hasSource <https://books.google.nl/books?id=TNhkAAAAcAAJ&pg=PA99> ;
          oa:hasSelector [
              a oa:TextQuoteSelector ;
-             oa:exact  "CHECK IT OUT" ;
-             oa:prefix "..." ;
-             oa:suffix "..." ] ] .
+             oa:exact  "Wahr ist es freilich, daß jeder Satz Vorstellungen enthalte, aber nur als Theile, mit denen er selbst nicht von derselben Art ist." ;
+             oa:prefix "erklären. " ;
+             oa:suffix " Theile mit Wahr ist es ferner" ] ] .
 
 # ----- gemein_vorstellung ----- #
 # SENSE
 :gemein_vorstellung_sense_bolz   a lemon:LexicalSense ;
-    lemon:value       "..."@de .
+    lemon:value       "Jede andere Vorstellung, welche der Gegenstände mehre (wenigstens zwei) vorstellt, wird dann im Gegensatze mit solchen Einzelvorstellungen eine Gemeinvorstellung, auch eine allgemeine Vorstellung genannt."@de .
 
 # ANNOTATION
 :gemein_vorstellung_sense_bolz_annotation a oa:Annotation ;
     oa:hasBody :gemein_vorstellung_sense_bolz ;
     oa:hasTarget [
-        oa:hasSource <https://checkitout.org> ;
+        oa:hasSource <https://books.google.it/books?id=JQyKDwAAQBAJ&pg=PA121> ;
         oa:hasSelector [
             a oa:TextQuoteSelector ;
-            oa:exact  "CHECK IT OUT" ;
-            oa:prefix "..." ;
-            oa:suffix "..." ] ] .
+            oa:exact  "Jede andere Vorstellung, welche der Gegenstände mehre (wenigstens zwei) vorstellt, wird dann im Gegensatze mit solchen Einzelvorstellungen eine Gemeinvorstellung, auch eine allgemeine Vorstellung genannt." ;
+            oa:prefix "zu nennen. " ;
+            oa:suffix "" ] ] .
 
 # ----- gegenstandslos_vorstellung ----- #
 # SENSE
 :gegenstandslos_vorstellung_sense_bolz  a lemon:LexicalSense ;
-    lemon:value       "..."@de .
+    lemon:value       "Wenn ich mit Recht vermuthe, daß es auch Sätze gebe, deren Unterlage gar keinen Gegenstand vorstellt: so wird es erlaubt seyn, dergleichen Sätze gegenstandslose zu nennen."@de .
 
 # ANNOTATION
 :gegenstandslos_vorstellung_sense_bolz_annotation a oa:Annotation ;
     oa:hasBody :gegenstandslos_vorstellung_sense_bolz ;
     oa:hasTarget [
-        oa:hasSource <https://checkitout.org> ;
+        oa:hasSource <https://books.google.nl/books?id=ZdhkAAAAcAAJ&pg=PA77> ;
         oa:hasSelector [
             a oa:TextQuoteSelector ;
-            oa:exact  "CHECK IT OUT" ;
-            oa:prefix "..." ;
-            oa:suffix "..." ] ] .
+            oa:exact  "Wenn ich mit Recht vermuthe, daß es auch Sätze gebe, deren Unterlage gar keinen Gegenstand vorstellt: so wird es erlaubt seyn, dergleichen Sätze gegenstandslose zu nennen." ;
+            oa:prefix "" ;
+            oa:suffix "Andere Sätze," ] ] .
 
 # ----- gegenständlich_vorstellung ----- #
 # SENSE
 :gegenständlich_vorstellung_sense_bolz   a lemon:LexicalSense ;
-    lemon:value       "..."@de .
+    lemon:value       "Ich verstehe aber unter der Gegenständlichkeit einer Vorstellung an sich nichts Anderes, als daß es Gegenstände, die unter ihr stehen, gebe;"@de .
 
 # ANNOTATION
 :gegenständlich_vorstellung_sense_bolz_annotation a oa:Annotation ;
@@ -364,30 +371,30 @@ dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
         oa:hasSource <https://books.google.nl/books?id=NbgAAAAAcAAJ&pg=PA222> ;
         oa:hasSelector [
             a oa:TextQuoteSelector ;
-            oa:exact  "CHECK IT OUT" ;
-            oa:prefix "..." ;
-            oa:suffix "..." ] ] .
+            oa:exact  "Ich verstehe aber unter der Gegenständlichkeit einer Vorstellung an sich nichts Anderes, als daß es Gegenstände, die unter ihr stehen, gebe;" ;
+            oa:prefix "1) " ;
+            oa:suffix "(§. 30.)," ] .
 
 # ----- einzel_vorstellung ----- #
 # SENSE
 :einzel_vorstellung_sense_bolz a lemon:LexicalSense ;
-    lemon:value       "..."@de .
+    lemon:value       "Einige Logiker haben dergleichen Vorstellungen, die nur einen einzigen Gegenstand haben, einzelne Vorstellungen genannt. Da aber jede Vorstellung als solche nur Eine ist, und mithin auch eine einzelne heißen kann: so wird es wohl richtiger seyn, sie mit Hrn. Krug (Fund. §.79. A. 2.154) Einzelvorstellungen zu nennen."@de .
 
 # ANNOTATION
 :einzel_vorstellung_sense_bolz_annotation a oa:Annotation ;
     oa:hasBody :einzel_vorstellung_sense_bolz ;
     oa:hasTarget [
-        oa:hasSource <https://checkitout.org> ;
+        oa:hasSource <https://books.google.it/books?id=JQyKDwAAQBAJ&pg=PA121> ;
         oa:hasSelector [
             a oa:TextQuoteSelector ;
-            oa:exact  "CHECK IT OUT" ;
-            oa:prefix "..." ;
-            oa:suffix "..." ] ] .
+            oa:exact  "Einige Logiker haben dergleichen Vorstellungen, die nur einen einzigen Gegenstand haben, einzelne Vorstellungen genannt. Da aber jede Vorstellung als solche nur Eine ist, und mithin auch eine einzelne heißen kann: so wird es wohl richtiger seyn, sie mit Hrn. Krug (Fund. §.79. A. 2.154) Einzelvorstellungen zu nennen." ;
+            oa:prefix "doch nur Einer sein. -- " ;
+            oa:suffix " Jede andere Vorstellung" ] ] .
 
 # ----- symbolische_vorstellung ----- #
 # SENSE
 :symbolische_vorstellungen_sense_bolz a lemon:LexicalSense ;
-    lemon:value       "..."@de .
+    lemon:value       "Es kann aber auch symbolische Vorstellungen geben, welche imaginär sind"@de .
 #     vocab:hasPart       :symbolische_vorstellung_sense_partX_bolz ;
 #     vocab:by            :bolzanoBernard ;
 #
@@ -411,7 +418,7 @@ dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
 # ----- imaginäre_vorstellung ----- #
 # SENSE
 :imaginäre_vorstellung_sense_bolz    a lemon:LexicalSense ;
-    lemon:value       "..."@de .
+    lemon:value       "Ich will also, wenn ich behaupte, daß es auch imaginäre Vorstellungen gebe, bloß sagen, daß einige Vorstellungen das Besondere haben, daß sich aus ihren verschiedenen Bestandtheilen für jenen Gegenstand, welchen sie ihrer Form nach vorstellen könnten, Beschaffenheiten ergeben, die miteinander im Widerspruche stehen."@de .
 
 # ANNOTATION
 :imaginäre_vorstellung_sense_bolz_annotation a oa:Annotation ;
@@ -420,9 +427,9 @@ dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
         oa:hasSource <https://books.google.nl/books?id=WapeAAAAcAAJ&pg=PA315> ;
         oa:hasSelector [
             a oa:TextQuoteSelector ;
-            oa:exact  "CHECK IT OUT" ;
-            oa:prefix "..." ;
-            oa:suffix "..." ] ] .
+            oa:exact  "Ich will also, wenn ich behaupte, daß es auch imaginäre Vorstellungen gebe, bloß sagen, daß einige Vorstellungen das Besondere haben, daß sich aus ihren verschiedenen Bestandtheilen für jenen Gegenstand, welchen sie ihrer Form nach vorstellen könnten, Beschaffenheiten ergeben, die miteinander im Widerspruche stehen." ;
+            oa:prefix "oft so sprechen. " ;
+            oa:suffix " Wenn man " ] ] .
 
 # ----- imaginäre_vorstellung ----- #
 # SENSE
@@ -446,11 +453,11 @@ dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
 # ----- OBJECT ----- #
 # SENSE
 :object_sense_bolz     a lemon:LexicalSense ;
-    lemon:value       "Objects can be ideas or not ideas"@en ;
+    lemon:value       """The first box would contain objects that exist (existieren), have Dasein (§34 I 154), are effective (wirklich, §79 I 362, 366; §275 III 16; §142 II 65; AT 85), or are real (real).4 The other box would contain objects that do not exist, don’t have Dasein, or are not effective or real"""@en ;
     vocab:interpretationOf  :gegenstand_sense_bolz ;
     lemon:condition
         [ a lemon:SenseDefinition ;
-                  lemon:value """
+          lemon:value """
           Class: Object
           EquivalentTo: Idea or NotIdea"""^^dt:OWL_Manchester
           ## certainty ??
@@ -460,18 +467,19 @@ dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
 :object_sense_bolz_annotation a oa:Annotation ;
     oa:hasBody :object_sense_bolz ;
     oa:hasTarget [
-        oa:hasSource <https://checkitout.org> ;
+        oa:hasSource <https://onedrive.live.com/?authkey=%21ANuzK2Q7p2HaMY4&cid=8E8B912431DFEA03&id=8E8B912431DFEA03%216234&parId=8E8B912431DFEA03%216233&o=OneUp> ;
         oa:hasSelector [
             a oa:TextQuoteSelector ;
-            oa:exact  "CHECK IT OUT" ;
-            oa:prefix "..." ;
-            oa:suffix "..." ] ] .
+            oa:exact  """The first box would contain objects that exist (existieren), have Dasein (§34 I 154), are effective (wirklich, §79 I 362, 366; §275 III 16; §142 II 65; AT 85), or are real (real).4 The other box would contain objects that do not exist, don’t have Dasein, or are not effective or real""" ;
+            oa:prefix "ontology in two ways-of-being boxes, as it were. " ;
+            oa:suffix ", though Bolzano makes clear that ideas and propositions" ] ] .
 
 
 # ----- IDEA ----- #
 # SENSE
 :idea_sense_bolz    a lemon:LexicalSense ;
-    lemon:value       "ideas are types of obejects that can refers to objects, objectual idea, or not, objectless idea."@en ;
+    lemon:value       "an idea is that part of a proposition that is not itself a proposition"@en,
+                      "The most interesting characteristic of ideas is their semantic character: they may or may not refer to something. In case they do, they are objectual; in case they don’t, they are objectless."@en  ;
     vocab:interpretationOf  :vorstellung_sense_bolz ;
     lemon:condition
         [ a lemon:SenseDefinition ;
@@ -486,19 +494,31 @@ dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
 # ANNOTATION
 :idea_sense_bolz_annotation a oa:Annotation ;
     oa:hasBody :idea_sense_bolz ;
+    oa:hasTarget :targetAnnotIdeaObjectObjectless,
     oa:hasTarget [
-        oa:hasSource <https://checkitout.org> ;
+        oa:hasSource <https://onedrive.live.com/?authkey=%21ANuzK2Q7p2HaMY4&cid=8E8B912431DFEA03&id=8E8B912431DFEA03%216234&parId=8E8B912431DFEA03%216233&o=OneUp> ;
         oa:hasSelector [
             a oa:TextQuoteSelector ;
-            oa:exact  "CHECK IT OUT" ;
-            oa:prefix "..." ;
-            oa:suffix "..." ] ] .
+            oa:exact  "an idea is that part of a proposition that is not itself a proposition" ;
+            oa:prefix "is mereologically derived from it; " ;
+            oa:suffix " (§48 I 216 2; BE 67)." ] ,
+          :selectorIdeaObjectObjectless ] .
+
+# TARGET (REUSED)
+:targetAnnotIdeaObjectObjectless
+        oa:hasSource <https://onedrive.live.com/?authkey=%21ANuzK2Q7p2HaMY4&cid=8E8B912431DFEA03&id=8E8B912431DFEA03%216234&parId=8E8B912431DFEA03%216233&o=OneUp> ;
+        oa:hasSelector [
+            a oa:TextQuoteSelector ;
+            oa:exact  "The most interesting characteristic of ideas is their semantic character: they may or may not refer to something. In case they do, they are objectual; in case they don’t, they are objectless." ;
+            oa:prefix "" ;
+            oa:suffix "(§66 I 297), " ] .
+
 
 
 # ----- REFERS-TO ----- #
 # SENSE
 :refersTo_sense_bolz    a lemon:LexicalSense ;
-    lemon:value       "..."@en ;
+    lemon:value       "The most interesting characteristic of ideas is their semantic character: they may or may not refer to something. In case they do, they are objectual; in case they don’t, they are objectless."@en  ;
     # vocab:interpretationOf  ;
     lemon:condition
         [ a lemon:SenseDefinition ;
@@ -511,53 +531,13 @@ dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
 # ANNOTATION
 :refersTo_sense_bolz_annotation a oa:Annotation ;
     oa:hasBody :refersTo_sense_bolz ;
-    oa:hasTarget [
-        oa:hasSource <https://checkitout.org> ;
-        oa:hasSelector [
-            a oa:TextQuoteSelector ;
-            oa:exact  "CHECK IT OUT" ;
-            oa:prefix "..." ;
-            oa:suffix "..." ] ] .
-
-  # Class: NotIdea
-  #
-  #     SubClassOf:
-  #         Object
-  #
-  #     DisjointWith:
-  #         Idea
-
-
-# ----- COMMON IDEA ----- #
-# SENSE
-:common_idea_sense_bolz    a lemon:LexicalSense ;
-    lemon:value       "common ideas are ..."@en ;
-    vocab:interpretationOf  :gemein_vorstellung_sense_bolz ;
-    lemon:condition
-        [ a lemon:SenseDefinition ;
-          lemon:value """
-          Class: Common_Idea
-          SubClassOf:
-              Idea,
-              refersTo min 2 Object """^^dt:OWL_Manchester
-        ] .
-
-# ANNOTATION
-:common_idea_sense_bolz_annotation a oa:Annotation ;
-    oa:hasBody :common_idea_sense_bolz ;
-    oa:hasTarget [
-        oa:hasSource <https://checkitout.org> ;
-        oa:hasSelector [
-            a oa:TextQuoteSelector ;
-            oa:exact  "CHECK IT OUT" ;
-            oa:prefix "..." ;
-            oa:suffix "..." ] ] .
+    oa:hasTarget :targetAnnotIdeaObjectObjectless .
 
 
 # ----- OBJECTLESS IDEA ----- #
 # SENSE
 :objectless_idea_sense_bolz    a lemon:LexicalSense ;
-    lemon:value       "objectless ideas are ..."@en ;
+    lemon:value       "The most interesting characteristic of ideas is their semantic character: they may or may not refer to something. In case they do, they are objectual; in case they don’t, they are objectless."@en  ;
     vocab:interpretationOf  :gegenstandslos_vorstellung_sense_bolz ;
     lemon:condition
         [ a lemon:SenseDefinition ;
@@ -567,22 +547,17 @@ dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
           DisjointWith: Objectual_Idea """^^dt:OWL_Manchester
         ] .
 
+
 # ANNOTATION
 :objectless_idea_sense_bolz_annotation a oa:Annotation ;
     oa:hasBody :objectless_idea_sense_bolz ;
-    oa:hasTarget [
-        oa:hasSource <https://checkitout.org> ;
-        oa:hasSelector [
-            a oa:TextQuoteSelector ;
-            oa:exact  "CHECK IT OUT" ;
-            oa:prefix "..." ;
-            oa:suffix "..." ] ] .
+    oa:hasTarget :targetAnnotIdeaObjectObjectless .
 
 
 # ----- OBJECTUAL IDEA ----- #
 # SENSE
 :objectual_idea_sense_bolz    a lemon:LexicalSense ;
-    lemon:value       "objectual ideas are ..."@en ;
+    lemon:value       "The most interesting characteristic of ideas is their semantic character: they may or may not refer to something. In case they do, they are objectual; in case they don’t, they are objectless."@en  ;
     vocab:interpretationOf  :gegenständlich_vorstellung_sense_bolz ;
     lemon:condition
         [ a lemon:SenseDefinition ;
@@ -596,19 +571,44 @@ dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
 # ANNOTATION
 :objectual_idea_sense_bolz_annotation a oa:Annotation ;
     oa:hasBody :objectual_idea_sense_bolz ;
-    oa:hasTarget [ #169
+    oa:hasTarget :targetAnnotIdeaObjectObjectless, :targetAnnotObjectualIdeaCommonSingular .
+
+
+# TARGET (REUSED)
+:targetAnnotObjectualIdeaCommonSingular
         oa:hasSource <https://onedrive.live.com/?authkey=%21ANuzK2Q7p2HaMY4&cid=8E8B912431DFEA03&id=8E8B912431DFEA03%216234&parId=8E8B912431DFEA03%216233&o=OneUp> ;
         oa:hasSelector [
             a oa:TextQuoteSelector ;
-            oa:exact  "CHECK IT OUT" ;
-            oa:prefix "..." ;
-            oa:suffix "..." ] ] .
+            oa:exact  "Objectual ideas may refer to exactly one object, like [Brigitte Fassbaender], in which case they are called singular, or to more than one, like [singer], in which case they are called common" ;
+            oa:prefix "[nothing] (§67 I 304).10" ;
+            oa:suffix " (§68 I 308)" ] .
+
+
+# ----- COMMON IDEA ----- #
+# SENSE
+:common_idea_sense_bolz    a lemon:LexicalSense ;
+    lemon:value       "Objectual ideas may refer to exactly one object, like [Brigitte Fassbaender], in which case they are called singular, or to more than one, like [singer], in which case they are called common" ;@en ;
+    vocab:interpretationOf  :gemein_vorstellung_sense_bolz ;
+    lemon:condition
+        [ a lemon:SenseDefinition ;
+          lemon:value """
+          Class: Common_Idea
+          SubClassOf:
+              Idea,
+              refersTo min 2 Object """^^dt:OWL_Manchester
+        ] .
+
+
+# ANNOTATION
+:common_idea_sense_bolz_annotation a oa:Annotation ;
+    oa:hasBody :common_idea_sense_bolz ;
+    oa:hasTarget :targetAnnotObjectualIdeaCommonSingular .
 
 
 # ----- SINGULAR IDEA ----- #
 # SENSE
 :singular_idea_sense_bolz    a lemon:LexicalSense ;
-    lemon:value       "singular ideas are ..."@en ;
+    lemon:value       "Objectual ideas may refer to exactly one object, like [Brigitte Fassbaender], in which case they are called singular, or to more than one, like [singer], in which case they are called common" ;@en ;
     vocab:interpretationOf  :einzel_vorstellung_sense_bolz ;
     lemon:condition
         [ a lemon:SenseDefinition ;
@@ -623,19 +623,13 @@ dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
 # ANNOTATION
 :singular_idea_sense_bolz_annotation a oa:Annotation ;
     oa:hasBody :singular_idea_sense_bolz ;
-    oa:hasTarget [
-        oa:hasSource <https://checkitout.org> ;
-        oa:hasSelector [
-            a oa:TextQuoteSelector ;
-            oa:exact  "CHECK IT OUT" ;
-            oa:prefix "..." ;
-            oa:suffix "..." ] ] .
+    oa:hasTarget :targetAnnotObjectualIdeaCommonSingular .
 
 
 # ----- IMAGINARY IDEA ----- #
 # SENSE
 :imaginary_idea_sense_bolz    a lemon:LexicalSense ;
-    lemon:value       "imaginary ideas are ..."@en ;
+    lemon:value       "A special kind of empty ideas, viz. contradictory ideas (or, as Bolzano usually prefers to call them, imaginary ideas) cannot even have an object (WL I, 315 ff., WL III, 405 f.), examples being [a round polygon], [a round square], [a triangle that is quadrangular], [a regular pentagon], [a wooden iron tool], [an equilateral rectangular triangle]"@en ;
     vocab:interpretationOf  :imaginäre_vorstellung_sense_bolz ;
     lemon:condition
         [ a lemon:SenseDefinition ;
@@ -650,12 +644,12 @@ dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
 :imaginary_idea_sense_bolz_annotation a oa:Annotation ;
     oa:hasBody :imaginary_idea_sense_bolz ;
     oa:hasTarget [
-        oa:hasSource <https://checkitout.org> ;
+        oa:hasSource <https://plato.stanford.edu/entries/bolzano/> ;
         oa:hasSelector [
             a oa:TextQuoteSelector ;
-            oa:exact  "CHECK IT OUT" ;
-            oa:prefix "..." ;
-            oa:suffix "..." ] ] .
+            oa:exact  "A special kind of empty ideas, viz. contradictory ideas (or, as Bolzano usually prefers to call them, imaginary ideas) cannot even have an object (WL I, 315 ff., WL III, 405 f.), examples being [a round polygon], [a round square], [a triangle that is quadrangular], [a regular pentagon], [a wooden iron tool], [an equilateral rectangular triangle]" ;
+            oa:prefix "[winged horse] (WL III, 24). " ;
+            oa:suffix " (WL I, 305, 315, 317, 321, 324, WL II, 329)." ] ] .
 
 # ----- REAL IDEA ----- #
 # SENSE
@@ -685,7 +679,7 @@ dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
 # ----- SYMBOLIC IDEA ----- #
 # SENSE
 :symbolic_idea_sense_bolz    a lemon:LexicalSense ;
-    lemon:value       "symbolic ideas are ..."@en ;
+    lemon:value       "A crucial element in Bolzano’s theory of reference and of his semiotics and a cornerstone of his logic is the notion of “symbolic idea” (§90 I 426–28), that is, an idea that refers to (an)other idea(s) or proposition(s), for instance [truth] or [idea]."@en ;
     vocab:interpretationOf  :symbolische_vorstellung_sense_bolz ;
     lemon:condition
         [ a lemon:SenseDefinition ;
@@ -703,9 +697,10 @@ dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
         oa:hasSource <https://onedrive.live.com/?authkey=%21ANuzK2Q7p2HaMY4&cid=8E8B912431DFEA03&id=8E8B912431DFEA03%216234&parId=8E8B912431DFEA03%216233&o=OneUp> ;
         oa:hasSelector [
             a oa:TextQuoteSelector ;
-            oa:exact  "CHECK IT OUT" ;
-            oa:prefix "..." ;
-            oa:suffix "..." ] ] .
+            oa:exact  "A crucial element in Bolzano’s theory of reference and of his semiotics and a cornerstone of his logic is the notion of “symbolic idea” (§90 I 426–28), that is, an idea that refers to (an)other idea(s) or proposition(s), for instance [truth] or [idea]." ;
+            oa:prefix "H. K. Gruber, and its width is 1.11 " ;
+            oa:suffix "" ] ] .
+
 
 ############ INFERENCE #################
 :symbolic_idea_sense_bolz_inferred    a vocab:InferredSense ;
