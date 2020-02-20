@@ -9,6 +9,7 @@
 @prefix oa: <https://www.w3.org/TR/annotation-vocab/#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
+
 dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
 
 ###############################################################################
@@ -236,15 +237,15 @@ dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
 ###############################################################################
 
 # ---------------- PROPONENTS/PHILOSOPHERS  --------------------- #
-:bolzanoBernard a foaf:Person ;
-              owl:sameAs <https://viaf.org/viaf/24615537> .
-
-:bettiArianna a foaf:Person ;
-              owl:sameAs <https://viaf.org/viaf/313490465> .
-
-:ginammiAnnapaola a foaf:Person ;
-              rdfs:label 'Annapaola Ginammi' ;
-              owl:sameAs <https://dblp.org/pers/w/Wierst:Pauline_van> .
+# :bolzanoBernard a foaf:Person ;
+#               owl:sameAs <https://viaf.org/viaf/24615537> .
+#
+# :bettiArianna a foaf:Person ;
+#               owl:sameAs <https://viaf.org/viaf/313490465> .
+#
+# :ginammiAnnapaola a foaf:Person ;
+#               rdfs:label 'Annapaola Ginammi' ;
+#               owl:sameAs <https://dblp.org/pers/w/Wierst:Pauline_van> .
 
 # ---------------- THEORIES --------------------- #
 :bolzano_theory_of_ideas a vocab:Theory ;
@@ -270,7 +271,6 @@ dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
                       lemon:value """
                       Ontology: <https://conceptsinmotion.org/e-ideas/vocabulary>"""^^dt:OWL_Manchester
                      ] .
-
 
 
 :revised_interp_of_bolzano_theory_of_ideas a vocab:Theory ;
@@ -328,7 +328,7 @@ dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
              oa:suffix " Theile mit Wahr ist es ferner" ] ] .
 
 # ----- gemein_vorstellung ----- #
-# SENSE
+# SENSE                       # rdf:type
 :gemein_vorstellung_sense_bolz   a lemon:LexicalSense ;
     lemon:value       "Jede andere Vorstellung, welche der Gegenstände mehre (wenigstens zwei) vorstellt, wird dann im Gegensatze mit solchen Einzelvorstellungen eine Gemeinvorstellung, auch eine allgemeine Vorstellung genannt."@de .
 
@@ -373,7 +373,7 @@ dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
             a oa:TextQuoteSelector ;
             oa:exact  "Ich verstehe aber unter der Gegenständlichkeit einer Vorstellung an sich nichts Anderes, als daß es Gegenstände, die unter ihr stehen, gebe;" ;
             oa:prefix "1) " ;
-            oa:suffix "(§. 30.)," ] .
+            oa:suffix "(§. 30.)," ] ] .
 
 # ----- einzel_vorstellung ----- #
 # SENSE
@@ -494,7 +494,7 @@ dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
 # ANNOTATION
 :idea_sense_bolz_annotation a oa:Annotation ;
     oa:hasBody :idea_sense_bolz ;
-    oa:hasTarget :targetAnnotIdeaObjectObjectless,
+    oa:hasTarget :targetAnnotIdeaObjectObjectless ;
     oa:hasTarget [
         oa:hasSource <https://onedrive.live.com/?authkey=%21ANuzK2Q7p2HaMY4&cid=8E8B912431DFEA03&id=8E8B912431DFEA03%216234&parId=8E8B912431DFEA03%216233&o=OneUp> ;
         oa:hasSelector [
@@ -587,7 +587,7 @@ dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
 # ----- COMMON IDEA ----- #
 # SENSE
 :common_idea_sense_bolz    a lemon:LexicalSense ;
-    lemon:value       "Objectual ideas may refer to exactly one object, like [Brigitte Fassbaender], in which case they are called singular, or to more than one, like [singer], in which case they are called common" ;@en ;
+    lemon:value       "Objectual ideas may refer to exactly one object, like [Brigitte Fassbaender], in which case they are called singular, or to more than one, like [singer], in which case they are called common"@en ;
     vocab:interpretationOf  :gemein_vorstellung_sense_bolz ;
     lemon:condition
         [ a lemon:SenseDefinition ;
@@ -608,7 +608,7 @@ dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
 # ----- SINGULAR IDEA ----- #
 # SENSE
 :singular_idea_sense_bolz    a lemon:LexicalSense ;
-    lemon:value       "Objectual ideas may refer to exactly one object, like [Brigitte Fassbaender], in which case they are called singular, or to more than one, like [singer], in which case they are called common" ;@en ;
+    lemon:value       "Objectual ideas may refer to exactly one object, like [Brigitte Fassbaender], in which case they are called singular, or to more than one, like [singer], in which case they are called common"@en ;
     vocab:interpretationOf  :einzel_vorstellung_sense_bolz ;
     lemon:condition
         [ a lemon:SenseDefinition ;
@@ -704,7 +704,7 @@ dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
 
 ############ INFERENCE #################
 :symbolic_idea_sense_bolz_inferred    a vocab:InferredSense ;
-    vocab:partOf              :symbolic_idea_sense_bolz ;
+    vocab:partOf               :symbolic_idea_sense_bolz ;
     vocab:hasCounterEvidence   :symbolic_idea_revised_sense_bolz_annotation ;
     lemon:condition
         [ a lemon:SenseDefinition ;
@@ -712,6 +712,7 @@ dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
           SubClassOf: Objectual_Idea """^^dt:OWL_Manchester ;
           vocab:wasDerivedFrom  :inferenceX
         ] .
+
 
 # ----- SYMBOLIC IDEA REVISED ----- #
 # SENSE
