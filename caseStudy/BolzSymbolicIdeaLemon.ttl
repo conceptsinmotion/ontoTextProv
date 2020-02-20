@@ -269,7 +269,8 @@ dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
                       :real_idea_sense_bolz ;
     lemon:condition [ a lemon:SenseDefinition ;
                       lemon:value """
-                      Ontology: <http://example.org/ontology>"""^^dt:OWL_Manchester
+                      Ontology: <https://example.org/ontology>"""^^dt:OWL_Manchester
+                      # Ontology: <https://conceptsinmotion.org/e-ideas/vocabulary>"""^^dt:OWL_Manchester
                      ] .
 
 
@@ -458,8 +459,8 @@ dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
     lemon:condition
         [ a lemon:SenseDefinition ;
           lemon:value """
-          Class: Object
-          EquivalentTo: Idea or NotIdea"""^^dt:OWL_Manchester
+          Class: Object """^^dt:OWL_Manchester
+          # EquivalentTo: Idea or NotIdea"""^^dt:OWL_Manchester
           ## certainty ??
         ] .
 
@@ -523,9 +524,9 @@ dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
     lemon:condition
         [ a lemon:SenseDefinition ;
           lemon:value """
-          ObjectProperty: refersTo
-          Range: Idea
-          Domain: Object """^^dt:OWL_Manchester ### ?????????????????????
+          ObjectProperty: refersTo"""^^dt:OWL_Manchester ### ?????????????????????
+          # Range: Idea
+          # Domain: Object """^^dt:OWL_Manchester ### ?????????????????????
         ] .
 
 # ANNOTATION
@@ -617,7 +618,7 @@ dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
           SubClassOf:
             Idea,
             refersTo exactly 1 Object
-          DisjointWith: Objectless_Idea """^^dt:OWL_Manchester
+            DisjointWith: Objectless_Idea """^^dt:OWL_Manchester
         ] .
 
 # ANNOTATION
@@ -702,7 +703,7 @@ dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
             oa:suffix "" ] ] .
 
 
-############ INFERENCE #################
+########### INFERENCE #################
 :symbolic_idea_sense_bolz_inferred    a vocab:InferredSense ;
     vocab:partOf               :symbolic_idea_sense_bolz ;
     vocab:hasCounterEvidence   :symbolic_idea_revised_sense_bolz_annotation ;
