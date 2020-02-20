@@ -269,7 +269,7 @@ dt:OWL_Manchester rdf:label "OWL-DL Manchester" .
                       :real_idea_sense_bolz ;
     lemon:condition [ a lemon:SenseDefinition ;
                       lemon:value """
-                      Ontology: <https://conceptsinmotion.org/e-ideas/vocabulary>"""^^dt:OWL_Manchester
+                      Ontology: <http://example.org/ontology>"""^^dt:OWL_Manchester
                      ] .
 
 
